@@ -1,0 +1,60 @@
+CPU 1: ARM946E-S
+
+Role: Processes gameplay mechanisms and video rendering.
+
+Basic Specs:
+    Clockspeed: 67Mhz,
+    Cache:
+        Instruction Cache: 8KB,
+        Data Cache: 4KB,
+        Both Are Tightly Coupled Memory.
+
+Harvard Architechture:
+Separate storage and signal pathways for instructions and data.
+The word width, timing, implementation technology, and memory address structure
+    can differ.
+
+https://developer.arm.com/documentation/ddi0201/d/introduction/about-the-arm946e-s-processor
+ARM Specs:
+    An ARM9E-S RISC integer CPU core featuring:
+        ARMv5TE 32-bit instruction set that has improved ARM/Thumb code
+            interworking and an enhanced multiplier designed for improved DSP
+            performance.
+        ARM debug architecture with additional support for real-time debug.
+            This enables critical exception handlers to execute while debugging
+            the system.
+    Support for external Tightly-Coupled Memory (TCM). A TCM interface is
+        provided for each of the external instruction and data memory blocks.
+        The size of both the Instruction and Data TCM blocks are implementor-specific
+        and can range from 0KB to 1MB.
+    Instruction and data caches. The design can be easily modified to enable
+        any combination of caches from 0KB to 1MB.
+
+    A protection unit that enables the memory to be protected in a simple
+        manner, ideal for embedded control applications.
+
+    An AMBA AHB bus interface. The ARM946E-S processor interfaces to the rest
+        of the system are through use of unified address and data buses. This
+        interface is compatible with the AMBA AHB bus standard.
+    Support for external coprocessors enabling floating point or other application
+        specific hardware acceleration to be added. For coprocessor support, the
+        instruction and data buses are exported along with simple handshaking signals.
+
+    Support for the use of a scan test methodology for the standard cell logic
+        and Built-In-Self-Test (BIST) for the TCM and caches.
+
+    An interface to an external Embedded Trace Macrocell (ETM) to support
+        real-time tracing of instructions and data.
+
+https://en.wikipedia.org/wiki/Classic_RISC_pipeline#The_classic_five_stage_RISC_pipeline
+Uses RISC 5 stage pipeline:
+    1. Instruction Fetch
+        Takes one cycle to read instructions. The program counter is incremented
+        at the same time as the current instruction is read. It increments either
+        increments by 4 and continues, or takes the result of a branch or jump
+        calculation. The size of an instruction is 4 bytes, so that's why it
+        increases by 4.
+    2. 
+    3. 
+    4. 
+    5. 
